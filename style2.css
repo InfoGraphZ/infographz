@@ -1,0 +1,1042 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #f4f4f4;
+    color: black;
+    line-height: 1.6;
+}
+
+
+/* Header Styles */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2; /* Ensure the header stays above the banner */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.navbar .logo {
+    height: 30px;
+    width: 150px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 3; /* Ensure the hamburger menu stays on top of the nav list */
+}
+
+.hamburger-menu .bar {
+    background-color: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Navigation List Styles */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover Effect on Links */
+.nav-list li a:hover {
+    color: #0866ff;
+    text-decoration: underline;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        height: 40px;
+    }
+
+    .nav-list {
+        display: none;
+        list-style-type: none;
+        width: 100%;
+        background-color: black;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Show menu when hamburger is clicked */
+    .nav-list.show {
+        display: block;
+    }
+}
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    z-index: 1; /* Ensure the banner stays behind the menu */
+    background-color: #f4f4f4;;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.banner-logo {
+    max-width: 400px;
+    width: 100%;
+    height: 100px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .banner {
+        height: 250px;
+    }
+
+    .banner-text {
+        padding: 8px;
+    }
+
+    .banner-logo {
+        max-width: 200px;  /* Adjust max-width for tablet view */
+        width: 100%;
+        height: auto;  /* Keep height proportional to width */
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+
+    .banner-text {
+        padding: 6px;
+    }
+
+    .banner-logo {
+        max-width: 150px;  /* Smaller max-width for mobile screens */
+        width: 100%;
+        height: auto;  /* Maintain aspect ratio */
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+}
+
+
+/* General Section Styles */
+#our-services {
+    padding: 20px;
+    text-align: center;
+}
+
+#our-services h1 {
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Service Container (Mobile Responsive) */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+    justify-content: center;  /* Center items on small screens */
+    gap: 20px;
+    max-width: 100%;  /* Ensure full width */
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+/* Individual Service Box (Mobile Responsive) */
+.service {
+    padding: 40px;
+    background-size: cover;  /* Ensure background images cover the full area */
+    background-position: center;  /* Center the background image */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+    flex: 1;
+    min-height: 350px; /* Increased height for all service boxes */
+    position: relative;
+    overflow: hidden;
+    width: 100%;  /* Use full width for small screens */
+    margin: 0;  /* Remove any margin */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+/* Service Background Images */
+.service-1 {
+    background-image: url('externals/business-image.jpg');  /* Replace with your image path */
+    
+}
+
+.service-2 {
+    background-image: url('externals/portfolio-website.jpg');  /* Replace with your image path */
+}
+
+.service-3 {
+    background-image: url('externals/academic-project.jpg');  /* Replace with your image path */
+}
+
+.service-4 {
+    background-image: url('../externals/free-courses.jpg');  /* Replace with your image path */
+}
+
+/* Hover Effect for Service Box */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Title (Heading) */
+.service h3 {
+    font-size: 1.9em;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-transform: capitalize;
+}
+
+/* Service Description (Paragraph) */
+.service p {
+    color: black;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* View More Button Styling */
+.view-more-btn {
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #0866ff;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* Button Hover Effect */
+.view-more-btn:hover {
+    background-color: #0866ff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Button Icon styling */
+.view-more-btn i {
+    font-size: 1.3em;
+}
+
+/* Button Focus Effect */
+.view-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling for the Explore More button */
+.button-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Mobile Responsiveness: Smaller Screens */
+@media (max-width: 768px) {
+    #our-services h1 {
+        font-size: 28px;
+    }
+
+    /* Adjust Service Container Layout */
+    .service-container {
+        flex-direction: column;  /* Stack the service boxes vertically */
+        align-items: center;  /* Center them */
+        gap: 15px;  /* Reduce the gap between service boxes */
+        padding: 0 10px;  /* Add padding to the left and right of the container */
+        box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    }
+
+    /* Adjust Service Box Layout */
+    .service {
+        width: calc(100% - 20px);  /* Ensure the service box takes full width */
+        min-height: 250px; /* Reduce height for small screens */
+        padding: 30px;  /* Reduce padding for mobile devices */
+        margin: 0;  /* Remove margin */
+        box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    }
+
+    .view-more-btn {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile Responsiveness: Very Small Screens */
+@media (max-width: 480px) {
+    #our-services h1 {
+        font-size: 24px;
+    }
+
+    /* Adjust Service Container Layout */
+    .service-container {
+        padding: 0 10px;
+        box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    }
+
+    .service {
+        width: calc(100% - 20px);  /* Ensure the service box is full width minus padding */
+        padding: 30px;  /* Reduce padding for very small devices */
+        margin: 0; /* Remove margin */
+        box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    }
+
+    .view-more-btn {
+        font-size: 1em;
+        padding: 8px 18px;
+    }
+}
+
+
+
+/*Trending Projects*/
+
+/* General Button Styles */
+button, .btn-primary, .btn-secondary, .btn-success {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Primary Button */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #004494;
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    /* margin: 40px 0; */ /* this code is used to give the blue line placement under banner*/
+    border-top: 4px solid #0866ff;
+}
+
+.section-title h1 {
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Filter Buttons */
+.program-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Project List */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 15px;
+}
+
+/* Project Item Styles */
+.project-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-item .price {
+    font-size: 16px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.project-item .projectdomain {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+a.btn-primary, a.btn-secondary, a.btn-success {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+a.btn-primary {
+    background-color: #0866ff;
+    color: white;
+    border: 2px solid #0866ff;
+}
+
+a.btn-primary:hover {
+    background-color: white;
+    color: #0866ff;
+    border-color: #0866ff;
+    transform: translateY(-2px);
+}
+
+a.btn-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+a.btn-secondary:hover {
+    background-color: #0866ff;
+    color: white;
+    border-color: #0866ff;
+    transform: translateY(-2px);
+}
+
+a.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+}
+
+a.btn-success:hover {
+    background-color: white;
+    color: #28a745;
+    border-color: #28a745;
+    transform: translateY(-2px);
+}
+
+/* Explore More Button */
+.button-container {
+    text-align: center;
+    margin-top: -5px;
+}
+
+.projectlibrarybutton {
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.projectlibrarybutton:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust title font size for smaller screens */
+    .section-title h1 {
+        font-size: 28px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    /* Adjust project list grid for smaller screens */
+    .project-list {
+        grid-template-columns: 1fr 1fr; /* Two columns instead of many */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    /* Button padding and font-size for mobile */
+    .btn-primary, .btn-secondary, .btn-success, .projectlibrarybutton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust the grid layout for very small screens */
+    .project-list {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    /* Adjust font sizes further for mobile screens */
+    .section-title h1 {
+        font-size: 24px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .project-item h3 {
+        font-size: 18px;
+    }
+
+    .project-item .price {
+        font-size: 14px;
+    }
+
+    .project-item .projectdomain {
+        font-size: 12px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Adjust button sizes for small screens */
+    .btn-primary, .btn-secondary, .btn-success, .projectlibrarybutton {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* Free Courses */
+
+
+.section-free-courses {
+    padding: 15px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+}
+
+.section-free-courses h1{
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.course-description p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    
+}
+
+/* Button Container */
+.button-container-free-courses {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.free-courses-button {
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.free-courses-button:hover {
+    background-color: #0056b3;
+}
+
+.free-courses-button:focus {
+    outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-free-courses {
+        padding: 15px;
+    }
+
+    .course-description p {
+        font-size: 1rem;
+    }
+
+    .free-courses-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-free-courses {
+        padding: 10px;
+    }
+
+    .course-description p {
+        font-size: 0.9rem;
+    }
+
+    .free-courses-button {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+/* FAQ Section */
+.faq {
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+}
+
+/* Heading Style */
+.faq h1 {
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.faq-item:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Question Style */
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Font Awesome Icon */
+.question i {
+    font-size: 1.5em;
+    color: #007BFF;
+    transition: transform 0.3s ease;
+}
+
+/* Answer Style */
+.answer {
+    padding: 15px 20px;
+    display: none;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Active Answer */
+.faq-item.active .answer {
+    display: block;
+    border-top: 1px solid #ddd;
+}
+
+/* Icon Rotation when Active */
+.faq-item.active .question i {
+    transform: rotate(45deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .faq {
+        padding: 15px;
+    }
+
+    .faq h1 {
+        font-size: 28px;
+    }
+
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .question {
+        padding: 12px 15px;
+        font-size: 1.1em;
+    }
+
+    .question i {
+        font-size: 1.2em;
+    }
+
+    .answer {
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq {
+        padding: 10px;
+    }
+
+    .faq h1 {
+        font-size: 24px;
+    }
+
+    .faq-item {
+        margin-bottom: 8px;
+    }
+
+    .question {
+        padding: 10px 12px;
+        font-size: 1em;
+    }
+
+    .question i {
+        font-size: 1.1em;
+    }
+
+    .answer {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+}
+
+
+/* Social media */
+.social-media {
+    padding: 40px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-media h1 {
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    background: #0866ff;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(8, 102, 255, 0.4);
+}
+
+.social-icons a .tooltip {
+    position: absolute;
+    bottom: -30px;
+    background: #0866ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    white-space: nowrap;
+}
+
+.social-icons a:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .social-media {
+        padding: 30px;
+    }
+
+    .social-media h1 {
+        font-size: 28px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .social-icons a .tooltip {
+        font-size: 12px;
+        bottom: -25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media {
+        padding: 20px;
+    }
+
+    .social-media h1 {
+        font-size: 24px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .social-icons a .tooltip {
+        font-size: 10px;
+        bottom: -20px;
+    }
+}
+
+
+/* footer-bottom */
+.footer-bottom {
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+.footer-bottom p{
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.highlight
+{
+    color: #0866ff;
+    font-weight: bold; 
+}
+

@@ -1,0 +1,161 @@
+/* Project Library Heading */
+.project-library-heading {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.highlight {
+    color: #0866ff;
+}
+
+/* Project Container and Filters */
+.project-container {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.program-filter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #0866ff;
+    color: #fff;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Project Items List */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.course-item h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #0866ff;
+    margin-bottom: 10px;
+}
+
+.projectdomain {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-container {
+        width: 90%;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    .course-list {
+        justify-content: center;
+    }
+
+    .course-item {
+        width: 45%; /* 2 items per row on tablets */
+    }
+
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 90%;
+    }
+
+    .course-list {
+        justify-content: center;
+    }
+
+    .course-item {
+        width: 100%; /* 1 item per row on mobile */
+        margin-bottom: 20px;
+    }
+
+    .course-item h3 {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .projectdomain {
+        font-size: 12px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    /* New CSS for mobile filter alignment */
+    .program-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center filters horizontally */
+    }
+}

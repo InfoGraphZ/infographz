@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #f4f4f4;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    height: 50px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-list li a:hover {
+    color: #0866ff;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 580px; /* Default height */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the banner area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.banner-logo {
+    max-width: 450px;
+    height: 100px; /* Adjust height as needed */
+    margin-right: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color for contrast */
+    text-align: center;
+    z-index: 2; /* Make sure text is above the image */
+}
+
+.banner-text h1 {
+    font-size: 3rem; /* Default font size */
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.5rem; /* Default font size */
+    margin: 0;
+}
+
+
+/* General Section Styles */
+#our-services {
+    padding: 20px;
+    text-align: center;
+   
+
+}
+
+#our-services h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+/* Service Container (Single Row Layout) */
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Individual Service Box */
+.service {
+    padding: 40px;
+    background: linear-gradient(145deg, #0866ff, #5a8bff);  /* Gradient Effect */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+    flex: 1;
+    min-height: 350px; /* Increased height for all service boxes */
+    position: relative;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Dark overlay effect */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* Hover Effect for Service Box */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Title (Heading) */
+.service h3 {
+    font-size: 1.9em;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-transform: capitalize;
+}
+
+/* Service Description (Paragraph) */
+.service p {
+    color: black;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* View More Button Styling */
+.view-more-btn {
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #0866ff;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effect */
+.view-more-btn:hover {
+    background-color: #0866ff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Button Icon styling */
+.view-more-btn i {
+    font-size: 1.3em;
+}
+
+/* Button Focus Effect */
+.view-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling for the Explore More button */
+
+.button-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+
+.projectlibrarybutton {
+    background-color: #007BFF; /* Primary blue color */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Spacing inside the button */
+    font-size: 16px; /* Font size */
+    font-family: 'Roboto', sans-serif; /* Font style */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover and active effects */
+  
+}
+
+/* Hover effect for the button */
+.projectlibrarybutton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Active effect for the button */
+.projectlibrarybutton:active {
+    background-color: #004494; /* Even darker blue */
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reset shadow */
+}
+/* Section Title and Filters */
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    border-top: 4px solid #0866ff;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Filter button styles */
+.program-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.filter-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+/* PROJECT List */
+/* Project Library Section */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Project List */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Project Item Styles */
+.project-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-item .price {
+    font-size: 16px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.project-item .projectdomain {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap for tighter button grouping */
+    margin-top: 15px;
+}
+
+/* Button Styles */
+a.btn-primary, a.btn-secondary, a.btn-success {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding for smaller button size */
+    font-size: 14px; /* Reduced font size */
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px; /* Slightly smaller border radius */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
+}
+
+/* Primary Button */
+a.btn-primary {
+    background-color: #0866ff;
+    color: white;
+    border: 2px solid #0866ff;
+}
+
+a.btn-primary:hover {
+    background-color: white;
+    color: #0866ff;
+    border-color: #0866ff;
+    transform: translateY(-2px); /* Smooth lift effect on hover */
+}
+
+/* Secondary Button */
+a.btn-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+a.btn-secondary:hover {
+    background-color: #0866ff;
+    color: white;
+    border-color: #0866ff;
+    transform: translateY(-2px); /* Smooth lift effect on hover */
+}
+
+/* Success Button */
+a.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+}
+
+a.btn-success:hover {
+    background-color: white;
+    color: #28a745;
+    border-color: #28a745;
+    transform: translateY(-2px); /* Smooth lift effect on hover */
+}
+
+/* Optional: Add active button state to smooth the interaction */
+a:active {
+    transform: translateY(0);
+}
+
+
+
+a.btn-success:hover {
+    background-color: white;
+    color: #28a745;
+}
+
+/* Explore More Button */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.projectlibrarybutton {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.projectlibrarybutton:hover {
+    background-color: #0056b3;
+}
+
+/* Free Certified Courses */
+.section-free-courses {
+    padding: 15px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+}
+
+.section-free-courses h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* CSS for the course description block */
+.course-description {
+    margin-top: -50px;
+    border-radius: 5px;  /* Rounded corners */
+    font-family: 'Roboto', sans-serif;;  /* Simple font for better readability */
+    color: #333;  /* Dark text for contrast */
+    line-height: 1.6; 
+}
+
+.button-container-free-courses {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -90px;
+}
+
+/* Styling for the button */
+.free-courses-button {
+    background-color: #007BFF; /* Primary blue color */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Spacing inside the button */
+    font-size: 16px; /* Font size */
+    font-family: 'Roboto', sans-serif; /* Font style */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover and active effects */
+}
+
+/* Hover effect for the button */
+.free-courses-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Active effect for the button */
+.free-courses-button:active {
+    background-color: #004494; /* Even darker blue */
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reset shadow */
+}
+
+/* FAQ Section */
+.faq {
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+}
+
+/* Heading Style */
+.faq h1 {
+    
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.faq-item:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Question Style */
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Font Awesome Icon */
+.question i {
+    font-size: 1.5em;
+    color: #007BFF;
+    transition: transform 0.3s ease;
+}
+
+/* Answer Style */
+.answer {
+    padding: 15px 20px;
+    display: none;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Active Answer */
+.faq-item.active .answer {
+    display: block;
+    border-top: 1px solid #ddd;
+}
+
+/* Icon Rotation when Active */
+.faq-item.active .question i {
+    transform: rotate(45deg);
+}
+
+* {
+    box-sizing: border-box;  /* Ensure padding/borders are included in the width calculation */
+}
+
+/* Social media */
+.social-media {
+    padding: 40px;
+    text-align: center;
+    border-top: 4px solid #0866ff;
+    /* background: linear-gradient(135deg, #f0f4ff, #dbe4f4); */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.social-media h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    background: #0866ff;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(8, 102, 255, 0.4);
+}
+
+.social-icons a .tooltip {
+    position: absolute;
+    bottom: -30px;
+    background: #0866ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    white-space: nowrap;
+}
+
+.social-icons a:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* footer-bottom */
+.footer-bottom {
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+.footer-bottom p{
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.highlight
+{
+    color: #0866ff;
+    font-weight: bold; 
+}
